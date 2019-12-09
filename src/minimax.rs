@@ -12,15 +12,12 @@ pub fn minimax<N, FN, IN, FT, FE>(node: &N, depth: i32, successors: &FN, termina
 where
     FN: Fn(&N) -> IN,
     IN: IntoIterator<Item = N>,
-    FT: Fn(&N) -> Option<Player>,
+    FT: Fn(&N) -> Option<f32>,
     FE: Fn(&N) -> i32,
 {
     let terminality = terminal(&node);
     if terminality.is_some() {
-        return match terminality.unwrap(){
-            Player::MIN => -std::f32::INFINITY,
-            Player::MAX => std::f32::INFINITY,
-        }
+        return terminality.unwrap();
     }
     else{
         let mut val = match player{
