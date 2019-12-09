@@ -7,7 +7,7 @@ license = "MIT"
 homepage = "https://github.com/skrobchik/adversarial_search"
 repository = "https://github.com/skrobchik/adversarial_search"
 documentation = "https://github.com/skrobchik/adversarial_search"
-keywords = ["artificial intelligence", "ai", "adversarial", "search", "minimax"]
+keywords = ["ai", "adversarial", "search", "minimax"]
 categories = ["algorithms"]
 edition = "2018"
 
