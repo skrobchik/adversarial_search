@@ -1,3 +1,6 @@
+use crate::utils::min;
+use crate::utils::max;
+
 enum Player {
     MIN,
     MAX,
@@ -7,22 +10,6 @@ fn is_maximizing_player(player: &Player) -> bool {
     match player {
         Player::MAX => true,
         Player::MIN => false,
-    }
-}
-
-fn max(a: f32, b: f32) -> f32 {
-    if a > b {
-        a
-    } else {
-        b
-    }
-}
-
-fn min(a: f32, b: f32) -> f32 {
-    if a < b {
-        a
-    } else {
-        b
     }
 }
 
