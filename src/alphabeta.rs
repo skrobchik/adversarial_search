@@ -33,8 +33,8 @@ pub fn alphabeta<N, FN, IN, FT, FE>(
     terminal: &FT,
     evaluation: &FE,
     maximizing_player: bool,
-    alpha: f32,
-    beta: f32,
+    mut alpha: f32,
+    mut beta: f32,
 ) -> f32
 where
     FN: Fn(&N) -> IN,
@@ -79,5 +79,5 @@ where
             break;
         }
     }
-    val;
+    val
 }
