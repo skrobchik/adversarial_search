@@ -8,7 +8,7 @@ enum Player{
     MAX,
 }
 
-fn is_maximizing_player(player: Player) -> bool{
+fn is_maximizing_player(player: &Player) -> bool{
     match player{
         Player::MAX => true,
         Player::MIN => false,
@@ -36,7 +36,7 @@ where
             Player::MAX => -std::f32::INFINITY,
         };
         for child in successors(&node){
-            let child_val = minimax(&child, depth-1, successors, terminal, evaluation, is_maximizing_player(player));
+            let child_val = minimax(&child, depth-1, successors, terminal, evaluation, is_maximizing_player(&player));
             let is_better_value: bool = match player{
                 Player::MIN => child_val < val,
                 Player::MAX => child_val > val,
