@@ -1,5 +1,5 @@
-use crate::utils::min;
 use crate::utils::max;
+use crate::utils::min;
 
 pub fn minimax<N, FN, IN, FT, FE>(
     node: &N,

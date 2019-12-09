@@ -1,8 +1,8 @@
-pub mod minimax;
 pub mod alphabeta;
+pub mod minimax;
 mod utils;
 
-pub mod prelude{
-    pub use crate::minimax::*;
+pub mod prelude {
     pub use crate::alphabeta::*;
+    pub use crate::minimax::*;
 }
