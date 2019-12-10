@@ -1,6 +1,6 @@
 [package]
 name = "adversarial_search"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Robert Serrano Kobylyansky <sk.robchik@gmail.com>"]
 description = "Rust adversarial search library"
 license = "MIT"
