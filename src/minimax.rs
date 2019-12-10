@@ -13,11 +13,14 @@ where
     FN: Fn(&N) -> IN,
     IN: IntoIterator<Item = N>,
     FT: Fn(&N) -> Option<f32>,
-    FE: Fn(&N) -> i32,
+    FE: Fn(&N) -> f32,
 {
     let terminality = terminal(&node);
     if terminality.is_some() {
         return terminality.unwrap();
+    }
+    if depth == 0 {
+        return evaluation(&node)
     }
     let mut val = match is_maximizing_player {
         true => -std::f32::INFINITY,
